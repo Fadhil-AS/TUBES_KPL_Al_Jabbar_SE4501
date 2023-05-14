@@ -7,7 +7,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AlJabbarTransLibraries", "A
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MainProgram", "MainProgram\MainProgram.csproj", "{EC96420D-C040-450A-8723-EAB71AD02BA5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestAutomata", "TestAutomata\TestAutomata.csproj", "{3D01EE08-A7B7-4CC5-AFDF-9C91D7CD2230}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestAutomata", "TestAutomata\TestAutomata.csproj", "{3D01EE08-A7B7-4CC5-AFDF-9C91D7CD2230}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestProjectTableDrivenGeneric", "TestProjectTableDrivenGeneric\TestProjectTableDrivenGeneric.csproj", "{1351090C-7991-4496-B5CB-7A8A5B7627DE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{3D01EE08-A7B7-4CC5-AFDF-9C91D7CD2230}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3D01EE08-A7B7-4CC5-AFDF-9C91D7CD2230}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3D01EE08-A7B7-4CC5-AFDF-9C91D7CD2230}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1351090C-7991-4496-B5CB-7A8A5B7627DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1351090C-7991-4496-B5CB-7A8A5B7627DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1351090C-7991-4496-B5CB-7A8A5B7627DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1351090C-7991-4496-B5CB-7A8A5B7627DE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

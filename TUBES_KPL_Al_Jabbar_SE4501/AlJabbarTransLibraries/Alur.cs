@@ -58,7 +58,68 @@ namespace AlJabbarTransLibraries
             return selectedEnum;
         }
 
+        public void PrintEnumValues<T>()
+        {
+            Type enumType = typeof(T);
 
+            if (enumType.IsEnum)
+            {
+                string[] enumNames = System.Enum.GetNames(enumType);
+
+                for (int i = 0; i < enumNames.Length; i++)
+                {
+                    Console.WriteLine($"{(i + 1)}. {(enumNames[i])}");
+                }
+            }
+            else
+            {
+                Console.WriteLine("Tipe data bukan enum.");
+            }
+        }
+
+        public T pilihTujuan<T>(int choice, int choiceTujuan) where T : Enum
+        {
+            AreaType kantorAsal = pilihAsal(choice);
+
+            if (kantorAsal == AreaType.Bandung)
+            {
+                Debug.Assert(choiceTujuan != null && choiceTujuan <= 6, "input tidak valid!");
+                Bandung bandungEnum = Bandung.Tasik;
+                Type enumType = typeof(Bandung);
+
+                for (int i = 1; i <= System.Enum.GetNames(enumType).Length; i++)
+                {
+                    if (choiceTujuan == i)
+                    {
+                        bandungEnum = (Bandung)i;
+                        break;
+                    }
+                }
+
+                return (T)(object)bandungEnum;
+            }
+            else if (kantorAsal == AreaType.Jakarta)
+            {
+                Debug.Assert(choiceTujuan != null && choiceTujuan <= 3, "input tidak valid!");
+                Jakarta jakartaEnum = Jakarta.Tasik;
+                Type enumType = typeof(Bandung);
+
+                for (int i = 0; i < System.Enum.GetNames(enumType).Length; i++)
+                {
+                    if (choiceTujuan == i)
+                    {
+                        jakartaEnum = (Jakarta)i;
+                        break;
+                    }
+                }
+
+                return (T)(object)jakartaEnum;
+            }
+            else
+            {
+                throw new ArgumentException("Kantor asal tidak valid!");
+            }
+        }
 
         public void cekHarga(int choice, int tujuanChoice)
         {
